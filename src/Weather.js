@@ -8,7 +8,7 @@ const Weather = () => {
     const fetchData = async () => {
         try {
             const response = await axios.get(
-                `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid={10694268192205eb29e22ad8a57860dd}`
+                `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=1fd2c72d87d58f1770496dbef0ecff87`
             );
             setWeatherData(response.data);
             console.log(response.data); //You can see all the weather data in console log
@@ -16,10 +16,6 @@ const Weather = () => {
             console.error(error);
         }
     };
-    
-    useEffect(() => {
-        fetchData();
-    }, []);
 
     const handleInputChange = (e) => {
         setCity(e.target.value);
