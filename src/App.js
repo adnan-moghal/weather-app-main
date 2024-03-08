@@ -7,7 +7,6 @@ const App = () => {
     <div>
       <h1>Weather forecast app</h1>
       <Weather/>
-      
     </div>
   )
 }
