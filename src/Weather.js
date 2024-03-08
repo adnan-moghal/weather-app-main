@@ -16,6 +16,7 @@ const Weather = () => {
             console.error(error);
         }
     };
+    
 
     const handleInputChange = (e) => {
         setCity(e.target.value);
