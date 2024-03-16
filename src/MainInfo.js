@@ -32,17 +32,19 @@ const MainInfo = ({info}) => {
             <div className="weatherInfo">
                 {weatherInfo ? (
                     <>
-                        <div className="box">
-                            <h2>{weatherInfo.name}</h2>
-                            <p>Temperature: {weatherInfo.main.temp}°C</p>
-                            <p>Description: {weatherInfo.weather[0].description}</p>
-                            <img src={"https://openweathermap.org/img/wn/" + weatherInfo.weather[0].icon + "@2x.png"} alt=""/>
-                        </div>
-                        <div className={"box" + (clicked ? "" : " expanded")}>
-                            <p>Feels like : {weatherInfo.main.feels_like}°C</p>
-                            <p>Humidity : {weatherInfo.main.humidity}%</p>
-                            <p>Pressure : {weatherInfo.main.pressure}</p>
-                            <p>Wind Speed : {weatherInfo.wind.speed}m/s</p>
+                        <div className="container">
+                            <div className="primary">
+                                    <h2>{weatherInfo.name}</h2>
+                                    <p>Temperature: {weatherInfo.main.temp}°C</p>
+                                    <p>Description: {weatherInfo.weather[0].description}</p>
+                                    <img src={"https://openweathermap.org/img/wn/" + weatherInfo.weather[0].icon + "@2x.png"} alt=""/>
+                                </div>
+                                <div className={"secondary" + (clicked ? "" : " expanded")}>
+                                    <p>Feels like : {weatherInfo.main.feels_like}°C</p>
+                                    <p>Humidity : {weatherInfo.main.humidity}%</p>
+                                    <p>Pressure : {weatherInfo.main.pressure}</p>
+                                    <p>Wind Speed : {weatherInfo.wind.speed}m/s</p>
+                            </div>
                         </div>
                         <button onClick={() => {click(clicked)}}>{
                             clicked ? (
