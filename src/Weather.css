@@ -1,0 +1,99 @@
+/* Weather.css */
+
+.search-container {
+    position: absolute;
+    top: 55px; /* Adjust as necessary */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 550px;
+    height: 64px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-form {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px; /* Padding inside the search container */
+}
+
+.search-input {
+    font-family: 'Poppins', sans-serif;
+    font-size: 29px;
+    border: none;
+    background: transparent;
+    color: rgba(219, 215, 215, 0.75);
+    width: 80%; /* Adjust as needed */
+}
+
+.search-button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 29px;
+    border: none;
+    background: transparent;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.search-input::placeholder {
+    color: rgba(219, 215, 215, 0.75);
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.weatherInfo {
+  /* ... other styles ... */
+  transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Add opacity transition */
+  width: 50%; /* Set an initial width */
+  max-width: 700px; /* Adjust the max-width as needed */
+  /* Center the weatherInfo initially */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1; /* Make sure it's fully visible */
+}
+
+.weatherInfo.expanded {
+  width: 80%; /* Adjust the width for the expanded state */
+  max-width: 1400px; /* Adjust if necessary */
+  /* Recenter after width change if necessary */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+  width: 100%; /* Ensure container takes full width of its parent */
+}
+
+.container.expanded {
+  flex-direction: row; /* Align children side by side when expanded */
+}
+
+  
+.secondary {
+  display: none; /* Hide secondary info initially */
+  transition: opacity 0.5s ease-in-out; /* Smooth transition for the opacity */
+  opacity: 0; /* Start with secondary info fully transparent */
+}
+
+.weatherInfo.expanded .secondary {
+  display: block; /* Show secondary info when expanded */
+  opacity: 1; /* Fade in secondary info */
+  /* Additional styling for layout as needed */
+}
+
+.primary, .secondary {
+  flex: 1;
+  /* Add padding, margins, or other styles as needed */
+}
+
+
+/* You may need additional CSS to recreate the icons from Figma design */
