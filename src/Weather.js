@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import MainInfo from './MainInfo';
+import './Weather.css';
 
 const Weather = () => {
     const [city, setCity] = useState('');
@@ -30,16 +31,17 @@ const Weather = () => {
     };
 
     return (
-        <div className="main">
-            <div className='Search'>
-                <form onSubmit={handleSubmit}>
+        <div className="weather-container">
+            <div className='search-container'>
+                <form onSubmit={handleSubmit} className="search-form">
                     <input
                         type="text"
                         placeholder="Enter city name"
                         value={city}
                         onChange={handleInputChange}
+                        className="search-input"
                     />
-                    <button type="submit">Get Weather</button>
+                    <button type="submit" className="search-button">Get Weather</button>
                 </form>
             </div>
             <MainInfo info={weatherData}/>
