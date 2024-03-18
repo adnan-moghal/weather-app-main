@@ -1,0 +1,157 @@
+.weatherInfo{
+    /* display: flex; */
+    /* flex-direction: column;  */
+    /* justify-content: space-between; */
+     /* Align items evenly */
+    width: 1401px;
+    height: 500px;
+    /* flex-shrink: 0; */
+    border-radius: 90px;
+    background: rgba(0, 0, 0, 0.50);
+    margin-top: 75px;
+}
+
+.infoContainer{
+    display: flex;
+    /* flex-direction: column;  */
+    justify-content: space-between;
+    /* Align items evenly */
+    flex-shrink: 0;
+}
+
+h2{
+    /* width: 497.12px; */
+    width: auto;
+    flex-shrink: 0;
+    margin: 0;
+    /* Remove margin */
+    color: #FFF;
+    text-align: center;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+
+.Temp{
+    /* width: 500.211px; */
+    display: flex;
+    width: auto;
+    height: 101.007px;
+    flex-shrink: 0;
+    /* margin: 0; just removing for now*/
+
+    color: #FFF;
+    text-align: center;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    align-items: center;
+    /* Align items vertically */
+    justify-content: center;
+    /* Align items horizontally */
+}
+
+/* p.Temp {
+    remove for now
+    margin-top: inherit;
+} */
+
+h3 {
+    /* width: 230.298px; */
+    width: auto;
+    height: 54.074px;
+    flex-shrink: 0;
+    margin: 0;
+    white-space: nowrap;
+    color: #FFF;
+    text-align: center;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+
+
+.icon{
+    width: 191px;
+    height: 178px;
+    flex-shrink: 0;
+    margin-right: 10px;
+    /* Adjust margin as needed */
+}
+
+.tempContainer {
+    display: flex;
+    align-items: center;
+    margin-right: 225px;
+    /* makes container shorter */
+    height: 100px;
+    
+    /* Align items vertically */
+}
+
+.leftInfo {
+    margin-top: 15px;
+
+}
+
+.rightInfo {
+    margin-top: 15px;
+    /* Adjust spacing between paragraphs */
+    margin-bottom: 5px;
+    /* Adjust spacing between paragraphs */
+    margin-right: 400px;
+
+    width: 264.553px;
+    height: 54.912px;
+    flex-shrink: 0;
+
+    color: #FFF;
+    /* text-align: center; */
+    align-items: center;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+.rightInfo p {
+    white-space: nowrap;
+    /* Prevent text wrapping */
+    /* line-height: 1; */
+    margin: 0;
+    /* text-align: center; */
+}
+
+.rightInfo p span {
+    margin-right: 10px;
+    /* Adjust the right margin to create space between elements */
+}
+
+hr {
+    width: 1310.799px;
+    height: 5px;
+    background: #FFF;
+    margin: 0px 10 500px;
+    /* Adjust margin to move the line higher */
+}
+
+.date{
+    width: 249.575px;
+    height: 36.73px;
+    flex-shrink: 0;
+    color: #FFF;
+    text-align: center;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 550px;
+    margin-top: 10px;
+}

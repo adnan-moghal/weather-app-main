@@ -1,0 +1,88 @@
+
+
+/* Weather.css */
+
+/* Define styles for the main container */
+.main {
+    padding: 20px;
+    background-color: linear-gradient(180deg, #00A3FF 59%, #0063BF 100%);
+    width: 1440px;
+    height: 1024px;
+    /* Change this to the desired background color */
+} 
+
+/* Define styles for the search form bar*/
+.Search {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    margin-top: 20px;
+    
+} 
+
+/* Define styles for the input and button */
+.Search input[type="text"] {
+
+    margin-top: 20px;
+    width: 550px;
+    height: 64px;
+    flex-shrink: 0;
+    background: rgba(0, 0, 0, 0.50);
+    flex: 1;
+    /* Take up remaining space in the search container */
+    padding: 10px;
+    /* font-size: 16px; */
+    border: none;
+    border-radius: 45px;
+    /* Ensure the input background is transparent */
+    color: white;
+    /* Set text color */
+    outline: none;
+    /* Remove default focus outline */
+    text-align: center;
+    font-size: 200%;
+    /* Center the placeholder text */
+    ::placeholder {
+        /* Style the placeholder text */
+        text-align: center;
+        /* Center the placeholder text */
+    }
+
+}
+
+/* .Search input[type="text"] {
+    margin-left: 10px;
+} */
+
+/* Define styles for the search icon */
+.Search img {
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 430px;
+    position: absolute;
+    /* Position the image absolutely */
+    left: 15px;
+    /* Adjust the left position as needed */
+    top: 50%;
+    /* Center vertically */
+    transform: translateY(-50%);
+    /* Adjust vertically centered */
+    /* Add margin to the left of the search icon */
+}
+
+
+/* Define styles for the main weather information */
+/* .mainbox {
+
+    width: 1401px;
+    height: 559px;
+    flex-shrink: 0;
+    border-radius: 90px;
+    background: rgba(0, 0, 0, 0.50);
+    
+    /* Add your styles for the main weather information here */
+/* }  */ 
+

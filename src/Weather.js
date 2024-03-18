@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import MainInfo from './MainInfo';
+import './Weather.css'
+import searchIcon from './assets/Search Icon.png'
+// import Forecast from './forecast';
+
+
 
 const Weather = () => {
+
     const [city, setCity] = useState('');
     const [weatherData, setWeatherData] = useState(null);
 
@@ -29,20 +35,33 @@ const Weather = () => {
         fetchData();
     };
 
+    const handleSearchClick = () => {
+        fetchData();
+    };
+    
     return (
-        <div className="main">
+        
+        <div className="main" style={{ backgroundImage: 'linear-gradient(180deg, #00A3FF 59%, #0063BF 100%)' }}>
             <div className='Search'>
                 <form onSubmit={handleSubmit}>
                     <input
                         type="text"
-                        placeholder="Enter city name"
+                        placeholder="Search for location/university"
                         value={city}
                         onChange={handleInputChange}
                     />
-                    <button type="submit">Get Weather</button>
+                    {/* <button type="submit">Get Weather</button> */}
+                    <img
+                        src={searchIcon} // Use the imported search icon image
+                        alt="Search"
+                        onClick={handleSearchClick} // Handle click event
+                        style={{ cursor: 'pointer' }} // Change cursor to indicate clickable
+                    />
                 </form>
             </div>
-            <MainInfo info={weatherData}/>
+            <div className='mainbox'>
+                <MainInfo info={weatherData} />
+            </div>
         </div>
     );
 };
