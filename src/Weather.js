@@ -19,9 +19,12 @@ const Weather = () => {
             setWeatherData(null)
             console.error(error);
         }
+    };
+
+    const fetchExtraData = async () => {
         try {
             const response = await axios.get(
-                `api.openweathermap.org/data/2.5/forecast?q=${city}&appid=1fd2c72d87d58f1770496dbef0ecff87`
+                `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=1fd2c72d87d58f1770496dbef0ecff87`
             );
             setExtraWeatherData(response.data);
             console.log(response.data); //You can see all the weather data in console log
@@ -29,8 +32,6 @@ const Weather = () => {
             setExtraWeatherData(null)
             console.error(error);
         }
-
-
     };
     
 
@@ -41,6 +42,7 @@ const Weather = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         fetchData();
+        fetchExtraData();
     };
 
     return (
