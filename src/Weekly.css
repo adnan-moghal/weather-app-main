@@ -6,7 +6,7 @@
     color: #FFFFFF;
     margin: 1rem auto;
     /* makes the background fit  */
-    width: 50%;
+    width: 50%; /*can it be changed to 80 to match the figma?*/
     justify-content: center;
 }
 
@@ -14,4 +14,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+/*Change AM*/
+/* Styles for individual items within the .weekly container */
+.weekly div {
+    flex: 1; /* Distribute space equally among items */
+    text-align: center; /* Center text horizontally */
 }
