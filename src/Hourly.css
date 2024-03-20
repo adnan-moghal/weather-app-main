@@ -1,0 +1,23 @@
+.hourly {
+    display: flex;
+    flex-direction: row;
+    height: 0;
+    overflow: hidden;
+    
+}
+.hourly.expanded {
+    align-items: last baseline;
+    height: 100%;
+    
+
+}
+.hour {
+    padding: 1rem;
+}
+
+.hour p {
+    text-align: center;
+    color: white;
+    margin: 0;
+    padding: none;
+}

@@ -12,85 +12,18 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 80%; /* Adjust the width as per your design needs */
-  max-width: 1400px; /* Maximum width of the container */
-  margin: 0 auto; /* This centers the box horizontally */
-  height: 559px;
+  width: 50%; /* Adjust the width as per your design needs */
+  max-width: 700px; /* Maximum width of the container */
+  margin: 1rem auto; /* This centers the box horizontally */
+  height: max-content;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 90px;
   color: #FFFFFF;
   padding: 20px;
   box-sizing: border-box;
   transition: all 0.5s ease-in-out; /* Smooth transition for expanding the box */
+  text-transform: capitalize;
 }
 
 
-/* Weather Title */
-h1 {
-  font-size: 96px;
-  text-align: center;
-  font-weight: 500;
-  margin-bottom: 0;
-}
 
-/* Description Text */
-.weather-description {
-  font-size: 48px;
-  text-align: center;
-  font-weight: 400;
-}
-
-/* Date Text */
-.date {
-  font-size: 32px;
-  text-align: center;
-  font-weight: 400;
-}
-
-/* Temperature Text */
-.temperature {
-  font-size: 96px;
-  text-align: center;
-  font-weight: 400;
-}
-
-/* Small Circle for Degrees Symbol */
-.degrees-symbol {
-  font-size: 36px;
-  font-weight: 900;
-}
-
-/* Search Container */
-.search-container {
-  position: absolute;
-  width: 550px;
-  height: 64px;
-  left: 443px;
-  top: 55px;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 45px;
-}
-
-/* Input Placeholder */
-.search-placeholder {
-  font-size: 29px;
-  line-height: 44px;
-  text-align: center;
-  color: rgba(219, 215, 215, 0.75);
-}
-
-/* Additional Weather Information */
-.additional-info {
-  font-size: 36px;
-  text-align: center;
-  font-weight: 400;
-}
-
-/* Weather Icons */
-.weather-icon {
-  width: 100px; /* Set the size of your icons */
-  height: 100px; /* Set the size of your icons */
-  /* Add your background-image urls here */
-}
-
-/* Adjust sizes and positions as needed */

@@ -46,7 +46,7 @@ const Weather = () => {
     };
 
     return (
-        <div className="weather-container">
+        <>
             <div className='search-container'>
                 <form onSubmit={handleSubmit} className="search-form">
                     <input
@@ -59,8 +59,8 @@ const Weather = () => {
                     <button type="submit" className="search-button">Get Weather</button>
                 </form>
             </div>
-            <MainInfo info={weatherData}/>
-        </div>
+            <MainInfo info={weatherData} extraInfo={extraWeatherData}/>
+        </>
     );
 };
 export default Weather;
