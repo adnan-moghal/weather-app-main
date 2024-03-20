@@ -1,4 +1,10 @@
 /* Weather.css */
+/*changes from Aryan*/
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 .weather-container{
   margin-left: auto;
   margin-right: auto;
@@ -6,7 +12,7 @@
 
 .search-container {
     position: absolute;
-    top: 55px; /* Adjust as necessary */
+    top: 20px; /* Adjust as necessary */
     left: 50%;
     transform: translateX(-50%);
     width: 550px;
@@ -67,14 +73,17 @@
   box-sizing: border-box;
   transition: all 0.5s ease-in-out; /* Smooth transition for expanding the box */
   text-transform: capitalize;
-  margin-top: 20%;
+  margin-top: 20%; /*or margin-top 7rem, Change AM*/
 }
 
 .weatherInfo.expanded {
   width: 80%; /* Adjust the width for the expanded state */
   max-width: 1400px; /* Adjust if necessary */
   /* Recenter after width change if necessary */
-  
+
+  /*Change AM*/
+  margin-top: 9rem;
+  height: 450px; 
 }
 
 .container {
