@@ -65,7 +65,7 @@
   color: #FFFFFF;
   padding: 20px;
   box-sizing: border-box;
-  transition: all 0.5s ease-in-out; /* Smooth transition for expanding the box */
+  transition : all 0.5s ease-in-out; /* Smooth transition for expanding the box */
   text-transform: capitalize;
   margin-top: 20%;
 }
