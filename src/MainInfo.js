@@ -47,15 +47,18 @@ const MainInfo = ({ info, extraInfo }) => {
     return (
       <>
         <div className={`weatherInfo ${clicked ? "expanded" : ""}`}>
-          <h2>{weatherInfo.name}</h2>
+          {/* <h2>{weatherInfo.name}</h2> */}
           <div className={`container ${clicked ? "expanded" : ""}`}>
             <div className="primary">
-              <p>Temperature: {weatherInfo.main.temp}°C</p>
-              <p>Description: {weatherInfo.weather[0].description}</p>
-              <img
+              <img className="primary-weather-icon"
                 src={`https://openweathermap.org/img/wn/${weatherInfo.weather[0].icon}@2x.png`}
                 alt="Weather icon"
               />
+              <div className="item-container">
+                <h2>{weatherInfo.name}</h2>
+                <p className="tempItem">Temperature: {weatherInfo.main.temp}°C</p>
+                <p className="descItem">Description: {weatherInfo.weather[0].description}</p>
+              </div>
             </div>
             <div className={`secondary ${clicked ? "expanded" : ""}`}>
               <p>Feels like: {weatherInfo.main.feels_like}°C</p>

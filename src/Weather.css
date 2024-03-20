@@ -115,7 +115,7 @@
 
 /* im still woring on the stuff below, its not finished yet */
 
-/* h2 {
+h2 {
   width: auto;
   flex-shrink: 0;
   margin: 0;
@@ -125,8 +125,23 @@
   font-family: "Poppins-Medium", Helvetica;
   font-weight: 500;
   line-height: normal;
-} */
+}
 
-/* .primary{
+.primary{
   display: flex;
-} */
+  align-items: center;
+  margin-right: 50%;
+}
+
+.primary-weather-icon{
+  width: 191px;
+  height: 178px;
+  /* margin-right: 50px; */
+}
+
+.item-container {
+  display: flex;
+  flex-direction: column;
+  /* margin-right: 50%; */
+}
+

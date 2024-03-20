@@ -63,7 +63,7 @@ const Weather = () => {
                     />
                     <input
                         type="text"
-                        placeholder="Searh for a location/university"
+                        placeholder="Search for a location/university"
                         value={city}
                         onChange={handleInputChange}
                         className="search-input"
