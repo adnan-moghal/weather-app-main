@@ -52,13 +52,21 @@
 }
 
 .weatherInfo {
-  /* ... other styles ... */
-  transition: width 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Add opacity transition */
-  width: 50%; /* Set an initial width */
-  max-width: 700px; /* Adjust the max-width as needed */
-  /* Center the weatherInfo initially */
- 
-  opacity: 1; /* Make sure it's fully visible */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%; /* Adjust the width as per your design needs */
+  max-width: 700px; /* Maximum width of the container */
+  margin: 1rem auto; /* This centers the box horizontally */
+  height: max-content;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 90px;
+  color: #FFFFFF;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: all 0.5s ease-in-out; /* Smooth transition for expanding the box */
+  text-transform: capitalize;
 }
 
 .weatherInfo.expanded {
@@ -71,7 +79,6 @@
 .container {
   display: flex;
   flex-direction: row; /* Stack children vertically */
-  
   align-items: center; /* Center children horizontally */
   justify-content: center;
   width: 100%; /* Ensure container takes full width of its parent */
@@ -80,7 +87,7 @@
 .container.expanded {
   flex-direction: row; /* Align children side by side when expanded */
   align-items: center;
-  justify-content: space-around;
+  justify-content: centre
 }
   
 .secondary {
