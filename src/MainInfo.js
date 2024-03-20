@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 
-const MainInfo = ({ info }) => {
+const MainInfo = ({ info, extraInfo }) => {
   const weatherInfo = info;
+  const extraWeatherInfo = extraInfo;
 
   const [clicked, setClicked] = useState(false);
 
@@ -53,14 +54,12 @@ const MainInfo = ({ info }) => {
               alt="Weather icon"
             />
           </div>
-          {clicked && (
-          <div className='secondary'>
+          <div className={`secondary ${clicked ? "expanded" : ""}`}>
             <p>Feels like: {weatherInfo.main.feels_like}°C</p>
             <p>Humidity: {weatherInfo.main.humidity}%</p>
             <p>Pressure: {weatherInfo.main.pressure}</p>
             <p>Wind Speed: {weatherInfo.wind.speed}m/s</p>
           </div>
-          )}
         </div>
         <button onClick={() => setClicked(!clicked)}> {/* This button toggles the state */}
           {clicked ? "View less" : "View more"}
