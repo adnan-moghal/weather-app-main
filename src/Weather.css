@@ -109,5 +109,48 @@
   /* Add padding, margins, or other styles as needed */
 }
 
+/* Hide the default checkbox */
+.slider-checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
 
-/* You may need additional CSS to recreate the icons from Figma design */
+/* Create a custom slider */
+.slider-label {
+  position: fixed;
+  top: 20px;  /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 50px; /* Width of the slider */
+  height: 25px; /* Height of the slider */
+  background-color: #ccc;
+  border-radius: 25px;
+}
+
+/* The slider handle */
+.slider-label:before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  bottom: 4px;
+  height: 17px; /* Handle height, must be less than the slider height */
+  width: 17px; /* Handle width, must be less than the slider width */
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+/* When the checkbox is checked, move the slider handle to the right */
+.slider-checkbox:checked + .slider-label:before {
+  transform: translateX(26px); /* Slider width - handle width - desired spacing */
+}
+
+/* Optional: Add styling for when the user hovers over the slider */
+.slider-label:hover:before {
+  background-color: #d4d4d4; /* Light grey */
+}
+
+
+

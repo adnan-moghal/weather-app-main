@@ -1,29 +1,44 @@
+/* index.css */
+
 /* General Styles */
 body {
   margin: 0;
   padding: 0;
   background: linear-gradient(180deg, #00A3FF 59%, #0063BF 100%);
   font-family: 'Poppins', sans-serif;
-}
-
-/* Main Weather Card */
-.weatherInfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 50%; /* Adjust the width as per your design needs */
-  max-width: 700px; /* Maximum width of the container */
-  margin: 1rem auto; /* This centers the box horizontally */
-  height: max-content;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 90px;
-  color: #FFFFFF;
-  padding: 20px;
-  box-sizing: border-box;
-  transition: all 0.5s ease-in-out; /* Smooth transition for expanding the box */
-  text-transform: capitalize;
+  transition: color 0.4s ease; /* We’ll handle the background transition separately */
+  position: relative; /* For pseudo-element positioning */
 }
 
 
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background: #2c3e50 100%;
+  opacity: 0; /* Start with dark mode gradient hidden */
+  transition: opacity 0.6s ease; /* Transition for pseudo-element opacity */
+}
 
+body.dark-mode::before {
+  opacity: 1; /* Show dark mode gradient */
+}
+
+/* Make sure to add z-index to elements that should be above the pseudo-element */
+.search-container, .weather-container, .weatherInfo {
+  position: relative; /* Create a new stacking context */
+  z-index: 1; /* Make sure it's above the pseudo-element */
+}
+
+/* Dark Mode Styles */
+html body.dark-mode {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, #184058 59%, #2c3e50 100%);
+  font-family: 'Poppins', sans-serif;
+  /* No need to redefine margin, padding, or font-family here if they are the same */
+}
