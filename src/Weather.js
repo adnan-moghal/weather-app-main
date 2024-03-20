@@ -79,18 +79,14 @@ const Weather = () => {
                 </form>
             </div>
             <MainInfo info={weatherData} extraInfo={extraWeatherData}/>
-            {dataFetched && (
-                <>
-                    <input 
-                        type="checkbox" 
-                        id="sliderToggle" 
-                        className="slider-checkbox" 
-                        onChange = {toggleDarkMode}
-                        checked = {darkMode}
-                        />
-                    <label htmlFor="sliderToggle" className="slider-label">Dark Mode</label>
-                </>
-            )}
+            <input 
+                type="checkbox" 
+                id="sliderToggle" 
+                className="slider-checkbox" 
+                onChange = {toggleDarkMode}
+                checked = {darkMode}
+                />
+            <label htmlFor="sliderToggle" className="slider-label">Dark Mode</label>
         </>
     );
 };
