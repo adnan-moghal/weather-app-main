@@ -67,6 +67,7 @@
   box-sizing: border-box;
   transition: all 0.5s ease-in-out; /* Smooth transition for expanding the box */
   text-transform: capitalize;
+  margin-top: 20%;
 }
 
 .weatherInfo.expanded {
@@ -111,3 +112,21 @@
 
 
 /* You may need additional CSS to recreate the icons from Figma design */
+
+/* im still woring on the stuff below, its not finished yet */
+
+/* h2 {
+  width: auto;
+  flex-shrink: 0;
+  margin: 0;
+  color: #FFF;
+  text-align: center;
+  font-size: 300%;
+  font-family: "Poppins-Medium", Helvetica;
+  font-weight: 500;
+  line-height: normal;
+} */
+
+/* .primary{
+  display: flex;
+} */

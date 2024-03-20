@@ -5,5 +5,13 @@
     border-radius: 90px;
     color: #FFFFFF;
     margin: 1rem auto;
+    /* makes the background fit  */
+    width: 50%;
+    justify-content: center;
+}
 
+.day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
