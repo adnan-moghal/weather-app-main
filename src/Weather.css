@@ -5,10 +5,7 @@
 }
 
 .search-container {
-    position: absolute;
-    top: 55px; /* Adjust as necessary */
-    left: 50%;
-    transform: translateX(-50%);
+    margin-top: 5vh;
     width: 650px;
     height: 64px;
     background: rgba(0, 0, 0, 0.5);
@@ -56,9 +53,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 50%; /* Adjust the width as per your design needs */
-  max-width: 700px; /* Maximum width of the container */
-  margin: 10% auto 1rem auto; /* This centers the box horizontally */
+  width: 550px; /* Adjust the width as per your design needs */
+  margin: 1rem auto 1rem auto; /* This centers the box horizontally */
   height: max-content;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 90px;
@@ -70,9 +66,7 @@
 }
 
 .weatherInfo.expanded {
-  width: 80%; /* Adjust the width for the expanded state */
-  max-width: 1400px; /* Adjust if necessary */
-  /* Recenter after width change if necessary */
+  width: 800px;
   
 }
 
@@ -83,13 +77,9 @@
   justify-content: center;
   width: 100%; /* Ensure container takes full width of its parent */
 }
-
-.container.expanded {
-  flex-direction: row; /* Align children side by side when expanded */
-  align-items: center;
-  justify-content: centre
+.container.expanded{
+  width: 100%;
 }
-
 .primary {
   text-align: center;
   display: flex;
@@ -102,6 +92,7 @@
   overflow: hidden; 
   transition: width 0.5s ease-in-out;
   text-align: center;
+  white-space: nowrap;
  
 }
 
@@ -111,11 +102,27 @@
   margin-right: 8rem;
 
 }
-/* You may need additional CSS to recreate the icons from Figma design */
+.clothing-recommendation {
+  background: rgba(0, 0, 0, 0.5);
+  color: #FFF;
+  padding: 18px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  font-family: 'Poppins', sans-serif; /* Consistent font family */
+  box-sizing: border-box; /* Include padding and border in the width */
+  text-align: center; /* Center the text */
+  margin-left: auto;
+  margin-right: auto;
+}
 
-/* You may need additional CSS to recreate the icons from Figma design */
+.clothing-recommendation h2 {
+  font-size: 24px; /* Decrease the font size as appropriate */
+  margin-bottom: 15px; /* Add some space between the title and the content */
+}
 
-/* im still woring on the stuff below, its not finished yet */
+.clothing-recommendation p {
+  font-size: 18px; 
+}
 
 h2 {
   width: auto;

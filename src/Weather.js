@@ -4,6 +4,7 @@ import MainInfo from './MainInfo';
 import './index.css';
 import './Weather.css';
 import searchIcon from './Search Icon.png'
+import ClothingRecommendation from './ClothingRecommendation';
 
 const Weather = () => {
     const [city, setCity] = useState('');
@@ -89,19 +90,16 @@ const Weather = () => {
                     />
                 </form>
             </div>
+            <input 
+                type="checkbox" 
+                id="sliderToggle" 
+                className="slider-checkbox" 
+                onChange = {toggleDarkMode}
+                checked = {darkMode}
+                />
+            <label htmlFor="sliderToggle" className="slider-label">Dark Mode</label>
             <MainInfo info={weatherData} extraInfo={extraWeatherData}/>
-            {dataFetched && (
-                <>
-                    <input 
-                        type="checkbox" 
-                        id="sliderToggle" 
-                        className="slider-checkbox" 
-                        onChange = {toggleDarkMode}
-                        checked = {darkMode}
-                        />
-                    <label htmlFor="sliderToggle" className="slider-label">Dark Mode</label>
-                </>
-            )}
+            <ClothingRecommendation weatherData={weatherData}/>
         </>
     );
 };
