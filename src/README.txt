@@ -2,31 +2,25 @@
 
 Follow the steps listed to set up and run the weather app.
 
-## 1.Download the app
-
-After downloading the pre-built weather app from the provided zip file,
-extract the contents of the downloaded file, to your desired location on your computer.
-
-## 2.Install node.js
+## 1.Install node.js
 
 Check if Node.js is already installed by running:
 `node -v`
 
-If Node.js is installed, you will ne able to view a version number. If not, you will need to install it. You can
+If Node.js is installed, you will be able to view a version number. If not, you will need to install it. You can
 download the installer from the official Node.js website: https://nodejs.org/en.
 
-## 3.Install additional dependencies
+## 2. Create a directory to store the react files
 
-Navigate into the weather-app directory, if not already.You can do this by:
+In your terminal, navigate to a directory to store all the app's files and run:
+npx create-react-app .
 
-`cd weather-app`
+## 3  Installing axios and making sure everything is up to date
 
-Install the required dependency, Axios for making HTTP requests and to fetch weather data from an API.
-You can do this by running:
+In the directory, run "npm install axios". This is for making API calls
+In the same directory, run "npm i" to make sure everthing is up to date
 
-`npm install axios`
-
-## 3.To run app
+## 4.To run app
 
 After installing the dependencies, you can run the app locally.
 To do this in the project directory, you can run:
