@@ -28,8 +28,8 @@ In the same directory, run "npm i" to make sure everthing is up to date
 
 ## 5. Running into erros
 
-If in the terminal you run into any errors, please follow the recomendation provided in the terminal
-Try running the commnds "npm fund" or "npm audit fix --force" as displayed in the terminal
+If in the terminal you run into any errors, please follow the recomemndation provided in the terminal
+Try running the commands "npm fund" or "npm audit fix --force" as displayed in the terminal
 
 ## 6. To run app
 
