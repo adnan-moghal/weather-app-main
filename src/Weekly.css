@@ -6,8 +6,9 @@
     color: #FFFFFF;
     margin: 1rem auto;
     /* makes the background fit  */
-    width: 50%;
+    
     justify-content: center;
+    padding: 1rem 2rem 1rem 2rem ;
 }
 
 .day {
