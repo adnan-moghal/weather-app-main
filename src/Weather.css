@@ -58,7 +58,7 @@
   justify-content: center;
   width: 50%; /* Adjust the width as per your design needs */
   max-width: 700px; /* Maximum width of the container */
-  margin: 1rem auto; /* This centers the box horizontally */
+  margin: 10% auto 1rem auto; /* This centers the box horizontally */
   height: max-content;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 90px;
@@ -67,7 +67,6 @@
   box-sizing: border-box;
   transition : all 0.5s ease-in-out; /* Smooth transition for expanding the box */
   text-transform: capitalize;
-  margin-top: 20%;
 }
 
 .weatherInfo.expanded {
@@ -90,75 +89,29 @@
   align-items: center;
   justify-content: centre
 }
+
+.primary {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+}
   
 .secondary {
   width: 0;
   overflow: hidden; 
   transition: width 0.5s ease-in-out;
+  text-align: center;
  
 }
 
 .weatherInfo.expanded .secondary {
   width: auto;
   transition: width 0.5s ease-in-out;
+  margin-right: 8rem;
 
 }
-
-.primary, .secondary {
-  text-align: center;
-  
-  /* Add padding, margins, or other styles as needed */
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* You may need additional CSS to recreate the icons from Figma design */
-
 
 /* You may need additional CSS to recreate the icons from Figma design */
 
@@ -174,12 +127,6 @@ h2 {
   font-family: "Poppins-Medium", Helvetica;
   font-weight: 500;
   line-height: normal;
-}
-
-.primary{
-  display: flex;
-  align-items: center;
-  margin-right: 25%;
 }
 
 .primary-weather-icon{

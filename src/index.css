@@ -69,7 +69,7 @@ html body.dark-mode {
 
 .valid-city {
   text-align: center;
-  margin-top: 20px; 
+  margin: auto auto auto auto; 
   color: white;
   font-size: 30px;
 }
