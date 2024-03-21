@@ -26,7 +26,12 @@ Make sure that all the files are moved over and are replaced if promoted to!!!!
 In the directory, run "npm install axios". This is for making API calls
 In the same directory, run "npm i" to make sure everthing is up to date
 
-## 5. To run app
+## 5. Running into erros
+
+If in the terminal you run into any errors, please follow the recomendation provided in the terminal
+Try running the commnds "npm fund" or "npm audit fix --force" as displayed in the terminal
+
+## 6. To run app
 
 After installing the dependencies, you can run the app locally.
 To do this in the project directory, you can run:
