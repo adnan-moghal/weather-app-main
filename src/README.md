@@ -21,7 +21,7 @@ Navigate into the weather-app directory, if not already.You can do this by:
 
 `cd weather-app`
 
-Install the rewuired dependency, Axios for making HTTP requests and to fetch weather data from an API.
+Install the required dependency, Axios for making HTTP requests and to fetch weather data from an API.
 You can do this by running:
 
 `npm install axios`
