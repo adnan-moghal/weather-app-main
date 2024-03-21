@@ -18,7 +18,8 @@ This is will create the project file structure
 
 ## 3. Move the src folder into the new directory
 
-Replace the src folder that has been created in the new project directory with the one you have downloaded
+Copy the src folder you have downloaded into the newly created project directory
+Make sure that all the files are moved over and are replaced if promoted to!!!!
 
 ## 4. Installing axios and making sure everything is up to date
 
