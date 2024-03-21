@@ -14,13 +14,18 @@ download the installer from the official Node.js website: https://nodejs.org/en.
 
 In your terminal, navigate to a directory to store all the app's files and run:
 npx create-react-app .
+This is will create the project file structure
 
-## 3  Installing axios and making sure everything is up to date
+## 3. Move the src folder into the new directory
+
+Replace the src folder that has been created in the new project directory with the one you have downloaded
+
+## 4. Installing axios and making sure everything is up to date
 
 In the directory, run "npm install axios". This is for making API calls
 In the same directory, run "npm i" to make sure everthing is up to date
 
-## 4.To run app
+## 5. To run app
 
 After installing the dependencies, you can run the app locally.
 To do this in the project directory, you can run:
