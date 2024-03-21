@@ -1,3 +1,5 @@
+/*Hourly.css*/
+
 .hourly {
     display: flex;
     flex-direction: row;
@@ -5,7 +7,6 @@
     overflow: hidden;
     white-space: nowrap;
     transition: all 0.5s ease-in-out;
-    
 }
 .hourly.expanded {
     height: 100%;

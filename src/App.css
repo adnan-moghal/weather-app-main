@@ -1,12 +1,10 @@
-/* App.css */
+/*App.css*/
 
 .app-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-
-    
+    align-items: center;  
 }
 
 .weather-title {

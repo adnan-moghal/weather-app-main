@@ -1,3 +1,5 @@
+/*Weekly.css*/
+
 .weekly {
     display: flex;
     flex-direction: row;
@@ -5,9 +7,7 @@
     border-radius: 3rem;
     color: #FFFFFF;
     margin: 1rem auto;
-    /* makes the background fit  */
-    
-    justify-content: center;
+    justify-content: center;      /*making the background fit*/
     padding: 1rem 2rem 1rem 2rem ;
 }
 

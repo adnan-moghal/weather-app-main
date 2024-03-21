@@ -1,13 +1,13 @@
-// ClothingRecommendation.js
+/*ClothingRecommendation.js*/
 
 const ClothingRecommendation = ({ weatherData }) => {
   const getRecommendations = () => {
     if (!weatherData) return null;
-    const temp = weatherData.main.temp; // current temp
-    const weatherCondition = weatherData.weather[0].main; // weather description
+    const temp = weatherData.main.temp; //current temp
+    const weatherCondition = weatherData.weather[0].main; //weather description
 
     let recommendations = '';
-    //Setting the recomendations based on the weather condition
+    //setting the recomendations based on the weather condition
     if (weatherCondition === 'Clear') {
       recommendations = 'It’s clear sky. Wear sunglasses!';
     } else if (weatherCondition === 'Clouds') {
@@ -22,7 +22,7 @@ const ClothingRecommendation = ({ weatherData }) => {
       recommendations = 'It’s misty. Wear bright clothes to be visible.';
     }
 
-    // Add more specific recommendations based on temperature
+    //added more specific recommendations based on temperature
     if (temp < 0) {
       recommendations += ' Also, put on a coat, gloves, and a warm hat.';
     } else if (temp >= 0 && temp < 15) {
