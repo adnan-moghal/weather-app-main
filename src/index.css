@@ -40,12 +40,9 @@ body.dark-mode::before {
   
 }
 
-
-
-
 .valid-city {
   text-align: center;
-  margin: auto auto auto auto; 
+  margin: 20rem auto auto auto; 
   color: white;
   font-size: 30px;
 }
