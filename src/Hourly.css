@@ -3,14 +3,14 @@
     flex-direction: row;
     height: 0;
     overflow: hidden;
+    white-space: nowrap;
+    transition: all 0.5s ease-in-out;
     
 }
 .hourly.expanded {
-    align-items: last baseline;
     height: 100%;
-    
-
 }
+
 .hour {
     padding: 1rem;
 }

@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import Hourly from "./Hourly";
 import Weekly from "./Weekly";
+import './index.css';
+import './Weather.css';
 
 const MainInfo = ({ info, extraInfo }) => {
   const weatherInfo = info;
-  const extraWeatherInfo = extraInfo;
+  
+  const [clicked, setClicked] = useState(false); //using states to track button value, so we can have animated divs
 
-  const [clicked, setClicked] = useState(false);
-
-  function getDate() {
+  function getDate() { // This function returns the date in Day, date, month by using JS Date function
     const daysOfWeek = [
       "Sunday",
       "Monday",
@@ -42,35 +43,37 @@ const MainInfo = ({ info, extraInfo }) => {
   }
 
   if (!weatherInfo) {
-    return <p>Please enter a valid city</p>;
+    return <p className="valid-city">Please enter a valid city</p>;
   } else {
     return (
       <>
-        <div className={`weatherInfo ${clicked ? "expanded" : ""}`}>
-          <h2>{weatherInfo.name}</h2>
-          <div className={`container ${clicked ? "expanded" : ""}`}>
+        <div className={`weatherInfo ${clicked ? "expanded" : ""}`}> {/* Using states to track weather button is clicked */}
+          <div className={`container ${clicked ? "expanded" : ""}`}> {/* to toggle expanding the divs*/}
             <div className="primary">
-              <p>Temperature: {weatherInfo.main.temp}°C</p>
-              <p>Description: {weatherInfo.weather[0].description}</p>
-              <img
-                src={`https://openweathermap.org/img/wn/${weatherInfo.weather[0].icon}@2x.png`}
+              <img className="primary-weather-icon"
+                src={`https://openweathermap.org/img/wn/${weatherInfo.weather[0].icon}@2x.png`} // This uses the icon code returned from the api to get an icon automatically
                 alt="Weather icon"
               />
+              <div className="item-container">
+                <h2>{weatherInfo.name}</h2>
+                <p className="tempItem">Temperature: {weatherInfo.main.temp}°C</p>
+                <p className="descItem">Description: {weatherInfo.weather[0].description}</p>
+              </div>
             </div>
             <div className={`secondary ${clicked ? "expanded" : ""}`}>
-              <p>Feels like: {weatherInfo.main.feels_like}°C</p>
-              <p>Humidity: {weatherInfo.main.humidity}%</p>
-              <p>Pressure: {weatherInfo.main.pressure}</p>
-              <p>Wind Speed: {weatherInfo.wind.speed}m/s</p>
+              <p className="expanded-info">Feels like: {weatherInfo.main.feels_like}°C</p>
+              <p className="expanded-info">Humidity: {weatherInfo.main.humidity}%</p>
+              <p className="expanded-info">Pressure: {weatherInfo.main.pressure}</p>
+              <p className="expanded-info">Wind Speed: {weatherInfo.wind.speed}m/s</p>
             </div>
           </div>
-          <Hourly extraInfo = {extraInfo} clicked ={clicked}/>
-          <button onClick={() => setClicked(!clicked)}> {/* This button toggles the state */}
+          <Hourly extraInfo = {extraInfo} clicked ={clicked}/> {/* Passing props to another component */}
+          <button className="view-button" onClick={() => setClicked(!clicked)}> {/* This button toggles the state */}
             {clicked ? "View less" : "View more"}
           </button>
           <p className="date">{getDate()}</p>
         </div>
-        <Weekly extraInfo = {extraInfo}/>
+        <Weekly extraInfo = {extraInfo}/> {/* Passing props to another component */}
       </>
     );
   }

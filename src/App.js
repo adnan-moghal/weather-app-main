@@ -1,10 +1,10 @@
 import React from 'react';
 import Weather from './Weather';
-import './App.css'; // Ensure you have an App.css for App-specific styles
+import './App.css';
 
 const App = () => {
   return (
-    <div className="app-container"> {/* Use this for positioning if necessary */}
+    <div className="app-container"> 
         <Weather/>
     </div>
   )

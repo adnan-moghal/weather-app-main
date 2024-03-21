@@ -2,8 +2,17 @@
     display: flex;
     flex-direction: row;
     background: rgba(0, 0, 0, 0.5);
-    border-radius: 90px;
+    border-radius: 3rem;
     color: #FFFFFF;
     margin: 1rem auto;
+    /* makes the background fit  */
+    
+    justify-content: center;
+    padding: 1rem 2rem 1rem 2rem ;
+}
 
+.day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
