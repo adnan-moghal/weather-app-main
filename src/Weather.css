@@ -9,7 +9,7 @@
     top: 55px; /* Adjust as necessary */
     left: 50%;
     transform: translateX(-50%);
-    width: 550px;
+    width: 650px;
     height: 64px;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 45px;
@@ -179,7 +179,7 @@ h2 {
 .primary{
   display: flex;
   align-items: center;
-  margin-right: 50%;
+  margin-right: 25%;
 }
 
 .primary-weather-icon{
@@ -192,4 +192,9 @@ h2 {
   display: flex;
   flex-direction: column;
   /* margin-right: 50%; */
+}
+
+.tempItem, .descItem, .expanded-info{
+  font-size: 16px;
+  font-weight: bold;
 }

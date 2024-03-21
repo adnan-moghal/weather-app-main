@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Hourly from "./Hourly";
 import Weekly from "./Weekly";
+import './index.css';
+import './Weather.css';
 
 const MainInfo = ({ info, extraInfo }) => {
   const weatherInfo = info;
@@ -42,7 +44,7 @@ const MainInfo = ({ info, extraInfo }) => {
   }
 
   if (!weatherInfo) {
-    return <p>Please enter a valid city</p>;
+    return <p className="valid-city">Please enter a valid city</p>;
   } else {
     return (
       <>
@@ -61,14 +63,14 @@ const MainInfo = ({ info, extraInfo }) => {
               </div>
             </div>
             <div className={`secondary ${clicked ? "expanded" : ""}`}>
-              <p>Feels like: {weatherInfo.main.feels_like}°C</p>
-              <p>Humidity: {weatherInfo.main.humidity}%</p>
-              <p>Pressure: {weatherInfo.main.pressure}</p>
-              <p>Wind Speed: {weatherInfo.wind.speed}m/s</p>
+              <p className="expanded-info">Feels like: {weatherInfo.main.feels_like}°C</p>
+              <p className="expanded-info">Humidity: {weatherInfo.main.humidity}%</p>
+              <p className="expanded-info">Pressure: {weatherInfo.main.pressure}</p>
+              <p className="expanded-info">Wind Speed: {weatherInfo.wind.speed}m/s</p>
             </div>
           </div>
           <Hourly extraInfo = {extraInfo} clicked ={clicked}/>
-          <button onClick={() => setClicked(!clicked)}> {/* This button toggles the state */}
+          <button className="view-button" onClick={() => setClicked(!clicked)}> {/* This button toggles the state */}
             {clicked ? "View less" : "View more"}
           </button>
           <p className="date">{getDate()}</p>
