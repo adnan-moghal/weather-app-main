@@ -1,51 +1,46 @@
+/*Index.css*/
+
+/*general body styles*/
+
 body {
   margin: 0;
-  padding: 0.5rem;
-  height: 100%;
-  background: linear-gradient(180deg, #00A3FF 59%, #0063BF 100%);
-  background-attachment: fixed;
-  font-family: "Poppins-Medium", Helvetica;
-  transition: color 0.4s ease; /* We’ll handle the background transition separately */
-  position: relative; /* For pseudo-element positioning */
-  
+  padding: 0;
+  height: 100vh;
+  background: #00A3FF; /*the default background colour*/
+  font-family: "Poppins-Medium", sans-serif;
+  transition: background-color 0.55s ease; /*smooth transition when changing background colour*/
 }
 
-body::-webkit-scrollbar { /*This allows for the scrollbar to be hidden without losing the functionality*/
-  display: none;
+/*scrollbar stles*/
+
+body::-webkit-scrollbar { /*hides the scrollbar*/
+  width: 0;
 }
 
-body::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  background: #2c3e50 100%;
-  opacity: 0; /* Start with dark mode gradient hidden */
-  transition: all 0.6s ease; /* Transition for pseudo-element opacity */
-  
-}
-/* Dark Mode Styles */
+/*dark mode styles*/
+
 body.dark-mode {
-  background: linear-gradient(180deg, #184058 59%, #2c3e50 100%);
-  background-attachment: fixed;
-  transition: all 0.6s ease;
+  background: #2c3e50; /*dark mode colour*/
+  transition: background-color 0.55s ease;
 }
 
-body.dark-mode::before {
-  opacity: 1; /* Show dark mode gradient */
-  transition: all 0.6s ease;
-  
-}
+/*valid location text container styles*/
 
-.valid-city {
+.valid-location {
   text-align: center;
-  margin: 20rem auto auto auto; 
+  padding: 20px; 
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px; /*rounded corners*/
   color: white;
   font-size: 30px;
+  width: 36%;
+  position: absolute;
+  top: 50%; /*centering vertically and horizontally*/
+  left: 50%;
+  transform: translate(-50%, -50%); /*to be able to properly center the container*/
 }
+
+/*view button styles*/
 
 .view-button{
   cursor: pointer;
@@ -59,45 +54,42 @@ body.dark-mode::before {
 }
 
 
-/* Hide the default checkbox */
+/*slider button styles*/
+
 .slider-checkbox {
-  opacity: 0;
+  opacity: 0;   /*hides the default checkbox*/
   width: 0;
   height: 0;
 }
 
-/* Create a custom slider */
 .slider-label {
-  position: fixed;
-  top: 20px;  /* Adjust as needed */
-  right: 20px; /* Adjust as needed */
+  position: fixed;  /*so the slider is independent of other elements*/
+  top: 20px;  
+  right: 20px; 
   cursor: pointer;
-  text-indent: -9999px;
-  width: 50px; /* Width of the slider */
-  height: 25px; /* Height of the slider */
+  text-indent: -9999px; /*gets rid of text*/
+  width: 50px; 
+  height: 25px; 
   background-color: #ccc;
   border-radius: 25px;
 }
 
-/* The slider handle */
 .slider-label:before {
   content: "";
   position: absolute;
   left: 4px;
   bottom: 4px;
-  height: 17px; /* Handle height, must be less than the slider height */
-  width: 17px; /* Handle width, must be less than the slider width */
+  height: 17px; 
+  width: 17px; 
   background-color: white;
   transition: 0.4s;
   border-radius: 50%;
 }
 
-/* When the checkbox is checked, move the slider handle to the right */
 .slider-checkbox:checked + .slider-label:before {
-  transform: translateX(26px); /* Slider width - handle width - desired spacing */
+  transform: translateX(26px); /*moves the handle to the right*/
 }
 
-/* Optional: Add styling for when the user hovers over the slider */
 .slider-label:hover:before {
-  background-color: #d4d4d4; /* Light grey */
+  background-color: #d4d4d4; /*turns light grey when hovering over*/
 }

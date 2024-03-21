@@ -1,3 +1,5 @@
+/*Weather.js*/
+
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import MainInfo from './MainInfo';
@@ -11,21 +13,21 @@ const Weather = () => {
     const [weatherData, setWeatherData] = useState(null);
     const [extraWeatherData, setExtraWeatherData] = useState(null);
     const [dataFetched, setDataFetched] = useState(false);
-    const [darkMode, setDarkMode] = useState(false);
+    const [darkMode, setDarkMode] = useState(false); //tracks if dark mode is enabled or not
 
 
-    useEffect(() => {
-        if (darkMode) {
+    useEffect(() => {        
+        if (darkMode) {          //if darkmode state is true, then the dark-mode class is added to the body
             document.body.classList.add('dark-mode');
         }
         else{
-            document.body.classList.remove('dark-mode');
+            document.body.classList.remove('dark-mode');     //otherwise it is removed
         }
-        }, [darkMode]);
+        }, [darkMode]);           //this effect is enabled whenever the state of dark mode changes
 
 
     const toggleDarkMode = () => {
-        setDarkMode(prevMode => !prevMode);
+        setDarkMode(prevMode => !prevMode);     //allows the state of darkmode to switch between true and false
       };
 
     const fetchData = async () => { //API call that returns current weather info
@@ -35,20 +37,20 @@ const Weather = () => {
             );
             setWeatherData(response.data);
             setDataFetched(true);
-            console.log(response.data); //You can see all the weather data in console log
+            console.log(response.data); //you can see all the weather data in console log
         } catch (error) {
             setWeatherData(null)
             console.error(error);
         }
     };
 
-    const fetchExtraData = async () => { // Secondary API call that returns 5 days weather with info every 3 hours
+    const fetchExtraData = async () => { //secondary API call that returns 5 days weather with info every 3 hours
         try {
             const response = await axios.get(
                 `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=1fd2c72d87d58f1770496dbef0ecff87`
             );
             setExtraWeatherData(response.data);
-            console.log(response.data); //You can see all the weather data in console log
+            console.log(response.data); //you can see all the weather data in console log
         } catch (error) {
             setExtraWeatherData(null)
             console.error(error);
@@ -75,10 +77,10 @@ const Weather = () => {
             <div className='search-container'>
                 <form onSubmit={handleSubmit} className="search-form">
                     <img className='search-button'
-                        src={searchIcon} // Use the imported search icon image
+                        src={searchIcon} //use the imported search icon image
                         alt="Search"
-                        onClick={handleSearchClick} // Handle click event
-                        style={{ cursor: 'pointer' }} // Change cursor to indicate clickable
+                        onClick={handleSearchClick} //handle click event
+                        style={{ cursor: 'pointer' }} //change cursor to indicate clickable
                     />
                     <input
                         type="text"
@@ -97,8 +99,8 @@ const Weather = () => {
                 checked = {darkMode}
                 />
             <label htmlFor="sliderToggle" className="slider-label">Dark Mode</label>
-            <MainInfo info={weatherData} extraInfo={extraWeatherData}/> {/* Passing API data into seperate components*/}
-            <ClothingRecommendation weatherData={weatherData}/> {/* Passing API data into seperate components*/}
+            <MainInfo info={weatherData} extraInfo={extraWeatherData}/> {/*passing API data into seperate components*/}
+            <ClothingRecommendation weatherData={weatherData}/> {/*passing API data into seperate components*/}
         </>
     );
 };

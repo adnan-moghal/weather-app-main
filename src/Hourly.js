@@ -1,9 +1,11 @@
+/*Hourly.css*/
+
 import './Hourly.css'
 
 const Hourly = ({extraInfo, clicked}) => {
     const hourlyData = extraInfo;
 
-    if(hourlyData) // returns template code for the hourly info by passing the API call that grab hourly and 5 day forecast
+    if(hourlyData) //returns template code for the hourly info by passing the API call that grab hourly and 5 day forecast
     {
         return ( 
             //class name is dynamic to allow animations

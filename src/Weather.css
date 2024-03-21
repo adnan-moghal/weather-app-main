@@ -1,92 +1,101 @@
-/* Weather.css */
-.weather-container{
-  margin-left: auto;
-  margin-right: auto;
-}
+/*Weather.css*/
+
+/*search styles*/
 
 .search-container {
-    margin-top: 5vh;
-    width: 650px;
-    height: 64px;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 45px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin-top: 5vh;
+  width: 650px;
+  height: 64px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .search-form {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 20px; /* Padding inside the search container */
-}
-
-.search-input {
-    font-family: 'Poppins', sans-serif;
-    font-size: 29px;
-    border: none;
-    background: transparent;
-    color: rgba(219, 215, 215, 0.75);
-    width: 80%; /* Adjust as needed */
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20px;
 }
 
 .search-button {
-    font-family: 'Poppins', sans-serif;
-    font-size: 29px;
-    border: none;
-    background: transparent;
-    color: #FFFFFF;
-    cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 29px;
+  border: none;
+  background: transparent;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+/*search input styles*/
+
+.search-input {
+  font-family: 'Poppins', sans-serif;
+  font-size: 29px;
+  border: none;
+  background: transparent;
+  color: rgba(219, 215, 215, 0.75);
+  width: 80%; 
 }
 
 .search-input::placeholder {
-    color: rgba(219, 215, 215, 0.75);
+  color: rgba(219, 215, 215, 0.75);
 }
 
 .search-input:focus {
-    outline: none;
+  outline: none;
 }
+
+/*weather info styles*/
 
 .weatherInfo {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 550px; /* Adjust the width as per your design needs */
-  margin: 1rem auto 1rem auto; /* This centers the box horizontally */
+  width: 550px; 
+  margin: 1rem auto;
   height: 350px;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 90px;
   color: #FFFFFF;
   padding: 20px;
   box-sizing: border-box;
-  transition : all 0.5s ease-in-out; /* Smooth transition for expanding the box */
+  transition : all 0.5s ease-in-out; 
   text-transform: capitalize;
 }
 
 .weatherInfo.expanded {
   height: 500px;
   width: 800px;
-  
 }
+
+/*container styles*/
 
 .container {
   display: flex;
-  flex-direction: row; /* Stack children vertically */
-  align-items: center; /* Center children horizontally */
+  flex-direction: row; 
+  align-items: center; 
   justify-content: center;
-  width: 100%; /* Ensure container takes full width of its parent */
+  width: 100%;
 }
+
 .container.expanded{
   width: 100%;
 }
+
+/*primary styles*/
+
 .primary {
   text-align: center;
   display: flex;
   align-items: center;
   margin-right: 2rem;
 }
+
+/*secondary styles*/
   
 .secondary {
   width: 0;
@@ -99,32 +108,34 @@
 
 .weatherInfo.expanded .secondary {
   width: 180px;
-  transition: all 0.5s ease-in-out;
   margin-right: 8rem;
-
 }
+
+/*clothing recommendation styles*/
+
 .clothing-recommendation {
   background: rgba(0, 0, 0, 0.5);
   color: #FFF;
   padding: 18px;
   border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  font-family: 'Poppins', sans-serif; /* Consistent font family */
-  box-sizing: border-box; /* Include padding and border in the width */
-  text-align: center; /* Center the text */
-  margin-left: auto;
-  margin-right: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /*subtle shadow for depth*/
+  font-family: 'Poppins', sans-serif; 
+  box-sizing: border-box; 
+  text-align: center; 
+  margin: auto;
   margin-bottom: 1rem;
 }
 
 .clothing-recommendation h2 {
-  font-size: 24px; /* Decrease the font size as appropriate */
-  margin-bottom: 15px; /* Add some space between the title and the content */
+  font-size: 24px; 
+  margin-bottom: 15px; 
 }
 
 .clothing-recommendation p {
   font-size: 18px; 
 }
+
+/*header and icon styles*/
 
 h2 {
   width: auto;
@@ -141,13 +152,13 @@ h2 {
 .primary-weather-icon{
   width: 191px;
   height: 178px;
-  /* margin-right: 50px; */
 }
+
+/*items container styles*/
 
 .item-container {
   display: flex;
   flex-direction: column;
-  /* margin-right: 50%; */
 }
 
 .tempItem, .descItem, .expanded-info{
