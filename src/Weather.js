@@ -28,7 +28,7 @@ const Weather = () => {
         setDarkMode(prevMode => !prevMode);
       };
 
-    const fetchData = async () => {
+    const fetchData = async () => { //API call that returns current weather info
         try {
             const response = await axios.get(
                 `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=1fd2c72d87d58f1770496dbef0ecff87`
@@ -42,7 +42,7 @@ const Weather = () => {
         }
     };
 
-    const fetchExtraData = async () => {
+    const fetchExtraData = async () => { // Secondary API call that returns 5 days weather with info every 3 hours
         try {
             const response = await axios.get(
                 `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=1fd2c72d87d58f1770496dbef0ecff87`
@@ -74,7 +74,6 @@ const Weather = () => {
         <>
             <div className='search-container'>
                 <form onSubmit={handleSubmit} className="search-form">
-                    {/* <button type="submit" className="search-button">Get Weather</button> */}
                     <img className='search-button'
                         src={searchIcon} // Use the imported search icon image
                         alt="Search"
@@ -98,8 +97,8 @@ const Weather = () => {
                 checked = {darkMode}
                 />
             <label htmlFor="sliderToggle" className="slider-label">Dark Mode</label>
-            <MainInfo info={weatherData} extraInfo={extraWeatherData}/>
-            <ClothingRecommendation weatherData={weatherData}/>
+            <MainInfo info={weatherData} extraInfo={extraWeatherData}/> {/* Passing API data into seperate components*/}
+            <ClothingRecommendation weatherData={weatherData}/> {/* Passing API data into seperate components*/}
         </>
     );
 };

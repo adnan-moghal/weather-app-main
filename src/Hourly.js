@@ -3,41 +3,11 @@ import './Hourly.css'
 const Hourly = ({extraInfo, clicked}) => {
     const hourlyData = extraInfo;
 
-    function getDate(timestamp) {
-        const daysOfWeek = [
-          "Sunday",
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday",
-        ];
-        const months = [
-          "January",
-          "February",
-          "March",
-          "April",
-          "May",
-          "June",
-          "July",
-          "August",
-          "September",
-          "October",
-          "November",
-          "December",
-        ];
-    
-        const currentDate = new Date(timestamp);
-        const dayOfWeek = daysOfWeek[currentDate.getDay()];
-    
-        return `${dayOfWeek}`;
-      }
-
-    if(hourlyData)
+    if(hourlyData) // returns template code for the hourly info by passing the API call that grab hourly and 5 day forecast
     {
         return ( 
-            <div className={`hourly ${clicked ? "expanded" : ""}`}>
+            //class name is dynamic to allow animations
+            <div className={`hourly ${clicked ? "expanded" : ""}`}>  
                 <div className="hour">
                     <p>12:00</p>
                     <img

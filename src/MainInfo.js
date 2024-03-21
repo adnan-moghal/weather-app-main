@@ -6,11 +6,10 @@ import './Weather.css';
 
 const MainInfo = ({ info, extraInfo }) => {
   const weatherInfo = info;
-  const extraWeatherInfo = extraInfo;
+  
+  const [clicked, setClicked] = useState(false); //using states to track button value, so we can have animated divs
 
-  const [clicked, setClicked] = useState(false);
-
-  function getDate() {
+  function getDate() { // This function returns the date in Day, date, month by using JS Date function
     const daysOfWeek = [
       "Sunday",
       "Monday",
@@ -48,12 +47,11 @@ const MainInfo = ({ info, extraInfo }) => {
   } else {
     return (
       <>
-        <div className={`weatherInfo ${clicked ? "expanded" : ""}`}>
-          {/* <h2>{weatherInfo.name}</h2> */}
-          <div className={`container ${clicked ? "expanded" : ""}`}>
+        <div className={`weatherInfo ${clicked ? "expanded" : ""}`}> {/* Using states to track weather button is clicked */}
+          <div className={`container ${clicked ? "expanded" : ""}`}> {/* to toggle expanding the divs*/}
             <div className="primary">
               <img className="primary-weather-icon"
-                src={`https://openweathermap.org/img/wn/${weatherInfo.weather[0].icon}@2x.png`}
+                src={`https://openweathermap.org/img/wn/${weatherInfo.weather[0].icon}@2x.png`} // This uses the icon code returned from the api to get an icon automatically
                 alt="Weather icon"
               />
               <div className="item-container">
@@ -69,13 +67,13 @@ const MainInfo = ({ info, extraInfo }) => {
               <p className="expanded-info">Wind Speed: {weatherInfo.wind.speed}m/s</p>
             </div>
           </div>
-          <Hourly extraInfo = {extraInfo} clicked ={clicked}/>
+          <Hourly extraInfo = {extraInfo} clicked ={clicked}/> {/* Passing props to another component */}
           <button className="view-button" onClick={() => setClicked(!clicked)}> {/* This button toggles the state */}
             {clicked ? "View less" : "View more"}
           </button>
           <p className="date">{getDate()}</p>
         </div>
-        <Weekly extraInfo = {extraInfo}/>
+        <Weekly extraInfo = {extraInfo}/> {/* Passing props to another component */}
       </>
     );
   }

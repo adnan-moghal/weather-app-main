@@ -1,16 +1,18 @@
-/* index.css */
-
-/* General Styles */
 body {
   margin: 0;
-  padding: 0;
+  padding: 0.5rem;
+  height: 100%;
   background: linear-gradient(180deg, #00A3FF 59%, #0063BF 100%);
-  font-family: 'Poppins', sans-serif;
-  height: 1024px;
+  background-attachment: fixed;
+  font-family: "Poppins-Medium", Helvetica;
   transition: color 0.4s ease; /* We’ll handle the background transition separately */
   position: relative; /* For pseudo-element positioning */
+  
 }
 
+body::-webkit-scrollbar { /*This allows for the scrollbar to be hidden without losing the functionality*/
+  display: none;
+}
 
 body::before {
   content: '';
@@ -22,22 +24,24 @@ body::before {
   z-index: -1;
   background: #2c3e50 100%;
   opacity: 0; /* Start with dark mode gradient hidden */
-  transition: opacity 0.6s ease; /* Transition for pseudo-element opacity */
+  transition: all 0.6s ease; /* Transition for pseudo-element opacity */
+  
+}
+/* Dark Mode Styles */
+body.dark-mode {
+  background: linear-gradient(180deg, #184058 59%, #2c3e50 100%);
+  background-attachment: fixed;
+  transition: all 0.6s ease;
 }
 
 body.dark-mode::before {
   opacity: 1; /* Show dark mode gradient */
+  transition: all 0.6s ease;
+  
 }
 
 
-/* Dark Mode Styles */
-html body.dark-mode {
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(180deg, #184058 59%, #2c3e50 100%);
-  font-family: 'Poppins', sans-serif;
-  /* No need to redefine margin, padding, or font-family here if they are the same */
-}
+
 
 .valid-city {
   text-align: center;

@@ -3,11 +3,11 @@
 const ClothingRecommendation = ({ weatherData }) => {
   const getRecommendations = () => {
     if (!weatherData) return null;
-    const temp = weatherData.main.temp;
-    const weatherCondition = weatherData.weather[0].main;
+    const temp = weatherData.main.temp; // current temp
+    const weatherCondition = weatherData.weather[0].main; // weather description
 
     let recommendations = '';
-
+    //Setting the recomendations based on the weather condition
     if (weatherCondition === 'Clear') {
       recommendations = 'It’s clear sky. Wear sunglasses!';
     } else if (weatherCondition === 'Clouds') {

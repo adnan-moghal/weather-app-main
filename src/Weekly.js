@@ -2,8 +2,7 @@ import './Weekly.css'
 
 const Weekly = ({extraInfo}) => {
 
-    function getDate(timestamp) {
-
+    function getDate(timestamp) { // This returns the day of the week by passing in a timestamp that is returned by the API call
         const data = extraInfo;
 
         const daysOfWeek = [
@@ -30,10 +29,11 @@ const Weekly = ({extraInfo}) => {
           "December",
         ];
     
-        const date = new Date(timestamp*1000);
+        const date = new Date(timestamp*1000); // The timestamp is returned as a UNIX timestamp. 
+                                               // Multiply by 1000 to get current date
         const dayOfWeek = daysOfWeek[date.getDay()];
     
-        return `${dayOfWeek}`;
+        return dayOfWeek;
       }
       if(extraInfo){
         return ( 
